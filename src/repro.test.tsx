@@ -1,6 +1,6 @@
 import { Popover } from "devextreme-react/popover";
 import { render, screen } from "@testing-library/react";
-import { test, expect } from "vitest";
+import { test } from "vitest";
 
 test("popover", async () => {
   render(
@@ -9,5 +9,5 @@ test("popover", async () => {
     </Popover>
   );
 
-  await expect(screen.findByText("Content")).resolves.toBeTruthy();
+  await screen.findByText("Content");
 });
